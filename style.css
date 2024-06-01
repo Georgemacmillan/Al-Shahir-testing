@@ -1,0 +1,159 @@
+
+/*
+#287094
+#F6F6F6
+#023246
+#D4D4CE
+*/
+*::selection{
+  background-color: black;
+  color: gold;
+}
+
+:root{
+  --hcolor:#287094;
+  --bgcolor:#D4D4CE;
+  --fcolor:#023246;
+}
+html{
+  height: 100vh;
+}
+body{
+  height: 100%;
+  display: grid;
+  grid-template-columns:repeat(10,1fr);
+  grid-template-rows:repeat(3,5% 1fr auto);
+  grid-template-areas: 
+  "head head head head nav nav nav nav nav nav"
+  "con con con con con con con con con con"
+  "foot foot foot foot foot foot foot foot foot foot"
+  ;
+}
+
+header{
+  grid-area: head;
+  background-color: var(--hcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vh
+}
+h2{
+  font-family: "Danfo";
+  margin: 0 0 0 0;
+  padding: 0;
+  color: #F6F6F6;
+  font-size: 2vh;
+}
+ul{
+  list-style: none;
+  display: inline;
+  margin: 0 0 0 0;
+  padding: 0;
+  padding-left: 10px;
+  text-wrap:nowrap;
+}
+li{
+  display: inline;
+  color: #F6F6F6;
+  border-right: 1px solid #F6F6F6;
+  text-wrap: nowrap;
+  font-size: 1.5vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: josefin sans;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+li:hover{
+  font-weight: bolder;
+}
+.join{
+  border: none;
+}
+.navc{
+  text-decoration:none;
+  color: #F6F6F6;
+}
+nav{
+  grid-area: nav;
+  background-color:var(--hcolor);
+  overflow: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 70vh;
+}
+section{
+  grid-area: con;
+  background-color:var(--bgcolor);
+  width: 100%;
+}
+
+.cardesc1{
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  border: none;
+}
+.title1,
+.Airbag,
+.milage1,
+.engine1,
+.tra1,
+.contact1{
+ text-decoration: none;
+ display: block;
+ color: #F6F6F6;
+ border: none;
+ color: #002B3C;
+ font-size: 1.7vh;
+ letter-spacing: 1px;
+ padding: 5px;
+ cursor: default;
+}
+
+.contact1{
+  border-bottom: none;
+}
+.contact2{
+  text-decoration: none;
+  color: #002B3C;
+}
+.title1{
+  color: var(--fcolor);
+  padding: 15px;
+  align-self: flex-start;
+  font-size: 2vh;
+  font-weight: bolder;
+}
+
+.car1 {
+  margin-top: 50px;
+display: flex;
+box-shadow: 0px 0px 7px black;
+background-color: #D6D6D6;
+border-radius: 5px;
+}
+.carimg1 {
+  max-width: 30vh;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+  margin-left: 5px
+}
+.scale1{
+  max-height: fit-content;
+  width: fit-content;
+  padding-top: 5px;
+  overflow: hidden;
+}
+.carimg1:hover{
+  transform: scale(1.1)
+}
+
+
+footer{
+  grid-area: foot;
+  background-color:var(--fcolor);
+  color: white;
+}
